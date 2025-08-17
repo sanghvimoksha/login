@@ -17,7 +17,7 @@ body {
   overflow: hidden;
 }
 
-/* ✅ Equal width for both panels */
+/* Equal width for both panels */
 .left-panel, 
 .glassbox {
   flex: 1;
