@@ -25,5 +25,22 @@
       </form>
     </div>
   </div>
+<script>
+document.querySelector('form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const confirm = document.getElementById('confirm').value;
+  const response = await fetch('http://localhost:3000/signup', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, password, confirm })
+  });
+  const resText = await response.text();
+  alert(resText);
+});
+</script>
+
 </body>
 </html>
